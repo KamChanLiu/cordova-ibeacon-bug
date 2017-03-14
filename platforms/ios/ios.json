@@ -1,0 +1,49 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"CoreLocationPlugin\"><param name=\"ios-package\" value=\"CoreLocationPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "NSLocationAlwaysUsageDescription": [
+                        {
+                            "xml": "<string>CoreLocationPlugin Test</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.test.corelocationplugin": {
+            "PACKAGE_NAME": "com.swireproperties.taikooplace"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "com.test.corelocationplugin.CoreLocationPlugin",
+            "file": "plugins/com.test.corelocationplugin/www/CoreLocationPlugin.js",
+            "pluginId": "com.test.corelocationplugin",
+            "clobbers": [
+                "CoreLocationPlugin"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "com.test.corelocationplugin": "1.0.0"
+    }
+}
